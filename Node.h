@@ -6,7 +6,7 @@
 template <typename T>
 class Node {
 public:
-    	T data;                //elemento almacenado en el nodo
+    	T data;                //elementto almacenado en el nodo
     	Node<T>* next;         //puntero al siguiente nodo en la secuencia
 
     	Node(T data, Node<T>* next = nullptr) : data(data), next(next) {}

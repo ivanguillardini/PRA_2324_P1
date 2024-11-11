@@ -33,7 +33,7 @@ public:
         delete[] arr;
     	}
 
-    	//implementación de los métodos heredados de List<T>
+    	//implementación de los metodos heredados de List<T>
     	void insert(int pos, T e) override {
         	if (pos < 0 || pos > n){
 		       	throw std::out_of_range("Posición fuera de rango");

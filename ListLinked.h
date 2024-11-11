@@ -15,7 +15,7 @@ public:
    	//constructor: inicializa lista vacía
     	ListLinked() : first(nullptr), n(0) {}
 
-    	//destructor: libera todos los nodos de la lista
+    	//destructor: liberaa todos los nodos de la lista
     	~ListLinked() {
         	Node<T>* current = first;
         	while (current != nullptr) {
