@@ -33,6 +33,8 @@ public:
 
     	// Destructor virtual para asegurar la correcta destrucción de objetos derivados		
 	virtual ~List() {}
+	virtual void add_front(T item) = 0;  // Agregar al frente
+    virtual void add_back(T item) = 0;   // Agregar al final	
 };
 
 #endif // LIST_H

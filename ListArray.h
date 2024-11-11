@@ -4,7 +4,7 @@
 #include <iostream>
 #include <stdexcept>
 #include "List.h"
-
+using namespace std;
 template <typename T>
 class ListArray : public List<T> {
 private:
@@ -113,6 +113,14 @@ public:
         out << "]";
         return out;
     	}
+
+	void add_front(T item) override {
+    insert(0, item);  // O cualquier otra lógica que quieras para insertar al frente
+}
+
+void add_back(T item) override {
+    append(item);  // O cualquier otra lógica que quieras para insertar al final
+}
 };
 
 #endif // LISTARRAY_H

@@ -1,18 +1,16 @@
 #include <iostream>
 #include "Node.h"
 
-int main() {
-    	Node<char> n1('A');
-    	Node<char> n2('B', &n1);
-    	Node<char> n3('C', &n2);
+int main(){
+    Node<char>* first = new Node<char>('A');
+    first = new Node<char>('R', first);
+    first = new Node<char>('P', first);
 
-    	Node<char>* current = &n3;
-    	while (current != nullptr) {
-        	std::cout << *current << " ";
-        	current = current->next;
-    	}
-    	std::cout << std::endl;
-
-    	return 0;
+    std::cout << "Secuencia: ";
+    Node<char>* aux = first;
+    while (aux != nullptr){
+        std::cout << aux->data << " ";
+        aux = aux->next;
+    }
+    std::cout << std::endl;
 }
-
